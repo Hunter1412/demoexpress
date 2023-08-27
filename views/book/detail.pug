@@ -1,0 +1,14 @@
+extends ../layout
+
+block content 
+    a(href="/book") 
+        i(class="fa-solid fa-arrow-left") 
+        span  back home
+    section(style='display: grid; place-items: center;') 
+        h1 Information of book  
+        article(style='display: flex; flex-flow: column wrap; justify-content: space-between')
+            p!= '<strong>ID</strong>: ' + book._id
+            p!= '<strong>Name</strong>: ' + book.title + " " + book.author
+            p!= '<strong>Price</strong>: ' + book.price
+            p!= '<strong>Image</strong>: '
+            img(src="/images/"+book.image, alt="image" width="100%" height="100%")

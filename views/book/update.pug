@@ -1,0 +1,24 @@
+extends ../layout
+
+block content 
+    a(href="/book") 
+        i(class="fa-solid fa-arrow-left") 
+        span  back home
+    h1 Update book 
+    form.mx-auto.col-6(action="/book/update/" +book._id method="post",enctype="multipart/form-data")
+        input(type="hidden" value=book._id name="id")
+        .form-group 
+            | Title
+            input.form-control(type="text" name="title" value=book.title) 
+        .form-group 
+            | Author
+            input.form-control(type="text" name="author" value=book.author) 
+        .form-group 
+            | Price
+            input.form-control(type="number" name="price" value=book.price) 
+        .form-group 
+            | Image 
+            img#upload_image(src="/images/"+book.image, width='150px')
+            input#upload_input.form-control-file(type="file" name="image" value=book.image) 
+        .form-group 
+            input.btn.btn-success(type="submit" value="Update")

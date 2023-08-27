@@ -1,0 +1,25 @@
+extends ../layout
+
+
+block content 
+    a(href="/book") 
+        i(class="fa-solid fa-arrow-left") 
+        span  back home
+    h1 Create new book
+    .text-danger= message 
+    form.mx-auto.col-6(action="/book/create", method="post", enctype="multipart/form-data")
+        .form-group
+            label(for="name") Title 
+            input.form-control(type="text" name="title") 
+        .form-group
+            label(for="author") Author
+            input.form-control(type="text" name="author") 
+        .form-group
+            label(for="price") Price
+            input.form-control(type="number" name="price") 
+        .form-group
+            label(for="image") Image
+            input#upload_input.form-control-file(type="file" name="image") 
+            img#upload_image(src="" alt="")
+        .form-group
+            input.btn.btn-primary(type="submit" value="Created") 
