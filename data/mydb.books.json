@@ -1,0 +1,52 @@
+[
+  {
+    "_id": {
+      "$oid": "64e97a51a43ae98cd3ce0254"
+    },
+    "title": "Nodejs",
+    "author": "Hunter",
+    "price": 123,
+    "image": "image-1693022801036-1000000001.png",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "64e9f6c7ea8c780bb928b800"
+    },
+    "title": "JavaScript",
+    "author": "hahaha",
+    "price": 123,
+    "image": "image-1693098916350-1000000001.png",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "64ea101dc67428e6a3f854d1"
+    },
+    "title": "Java",
+    "author": "Vinh",
+    "price": 123,
+    "image": "image-1693061149549-1000000001.jpg",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "64eaabd031a3e169c66359d4"
+    },
+    "title": "Script",
+    "author": "Hunter",
+    "price": 123,
+    "image": "image-1693101008370-1000000000.png",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "64eaae05a6c0470e2cf33fd1"
+    },
+    "title": "Pro nodejs",
+    "author": "Jon Skeet",
+    "price": 1200,
+    "image": "image-1693101573660-1000000001.png",
+    "__v": 0
+  }
+]
