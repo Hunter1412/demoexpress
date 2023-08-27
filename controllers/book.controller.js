@@ -12,9 +12,9 @@ class BookController {
         return books;
     };
 
-    index = async (req, res, next) => {
-        const books = await this.getBooks();
-        return res.render('book/index', { books: books });
+    index = (req, res, next) => {
+        const books = this.getBooks();
+        return res.json(data.books);
     };
 
     search = async (req, res, next) => {
@@ -27,17 +27,9 @@ class BookController {
         const result = books.filter(item => item.title.toLowerCase().indexOf(title) >= 0);
 
         if (result.length === 0) {
-            return res.render('book/index', {
-                books: null,
-                message: "Can't find " + title,
-                type: "danger"
-            });
+            return res.send("Can't find by " + title);
         }
-        return res.render('book/index', {
-            books: result,
-            message: "Search by keyword: " + title,
-            type: "success"
-        });
+        return res.json(result);
     };
 
     create = async (req, res, next) => {
